@@ -1,0 +1,6 @@
+<h1>My belov3d lists</h1>
+<% @lists.each do |list| %>
+<%= link_to "#{list.name}", "/lists/#{list.id}" %><br />
+<% end %>
+
+<button><%= link_to "nouvelle liste", "/lists/new" %></button>
