@@ -1,6 +1,10 @@
-<h1>My belov3d lists</h1>
+<h1 class="text-center pt-3 bg-success" style="height: 100px">My belov3d lists</h1>
 <% @lists.each do |list| %>
-<%= link_to "#{list.name}", "/lists/#{list.id}" %><br />
+  <div class="banner-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key, height: 300, crop: :fill %>')">
+    <%= link_to "#{list.name}", "/lists/#{list.id}" %><br />
+  </div>
 <% end %>
 
 <button><%= link_to "nouvelle liste", "/lists/new" %></button>
+
+<%# style="background-image: url('<%= cl_image_tag(@list.photo.key) %>

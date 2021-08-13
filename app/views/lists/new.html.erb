@@ -1,6 +1,7 @@
 <%= simple_form_for @list do |f| %>
   <%= f.input :name %>
-  <%= f.button :submit %>
+  <%= f.input :photo, as: :file %>
+  <button><%= f.button :submit %></button>
 <% end %>
 
 <button><%= link_to "retour", "/lists" %></button>
